@@ -130,7 +130,7 @@ void MyListener::enterL_proxy(tinyrexxParser::L_proxyContext * ctx){
 }
 
 void MyListener::exitL_proxy(tinyrexxParser::L_proxyContext * ctx){
-    cout << "{" << endl;
+    cout << "){" << endl;
 }
 
 void MyListener::enterTerminate(tinyrexxParser::TerminateContext* ctx){
@@ -150,10 +150,12 @@ void MyListener::exitI_op(tinyrexxParser:: I_opContext* ctx){
     cout<<string(indent, ' ')<<"} "<<'\n';
 }
 void MyListener::enterBool_OP(tinyrexxParser::Bool_OPContext* ctx){
-    cout<<"(";
+    if(ctx->OPENP()!=NULL)
+      cout<<")";
 }
 void MyListener::exitBool_OP(tinyrexxParser::Bool_OPContext* ctx){
-    cout<< ")";
+    if(ctx->CLOSEP()!=NULL)
+      cout<< ")";
 }
 
 void MyListener::exitL_else(tinyrexxParser::L_elseContext* ctx){
