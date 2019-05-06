@@ -15,7 +15,7 @@ a_expr    : ID | NUMBER | '(' a_expr ')' | a_expr a_op a_expr | MINUS a_expr ;
 a_op      : MINUS | PLUS | MUL | DIV ;
 r_op      : EQUAL | LT | LEQ | GT | GEQ ;
 terminate : 'exit' a_expr;
-bool_OP   : OPENP bool_OP CLOSEP | bool_OP AND bool_OP |bool_OP OR bool_OP | NOT bool_OP | test;
+bool_OP   : OPENP bool_OP CLOSEP | bool_OP AND bool_OP |bool_OP OR bool_OP | NOT bool_OP | test |a_expr;
 
 OPENP     : '(' ;
 CLOSEP    : ')' ;
