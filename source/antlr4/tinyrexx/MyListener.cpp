@@ -127,11 +127,13 @@ void MyListener::exitW_loop(tinyrexxParser::W_loopContext * ctx){
 
 void MyListener::enterL_proxy(tinyrexxParser::L_proxyContext * ctx){
     cout << "(";
+    if(ctx->ID()!=NULL)
+      cout << ctx->ID()->getText() << "=" ;
 }
 
 void MyListener::exitL_proxy(tinyrexxParser::L_proxyContext * ctx){
-    if(ctx->a_expr()!= NULL)
-        cout << "; " << ctx->assign()->ID()->getText() << "++";
+    if(ctx->ID()!= NULL)
+        cout << "; " << ctx->ID()->getText() << "++";
     cout << "){" << endl;
 }
 
@@ -175,4 +177,8 @@ void MyListener::exitB_op(tinyrexxParser::B_opContext* ctx){
 
 void MyListener::exitB_not(tinyrexxParser::B_notContext* ctx){
   cout << "!";
+}
+
+void MyListener::exitTo_r(tinyrexxParser::To_rContext* ctx){
+  cout<<";";
 }

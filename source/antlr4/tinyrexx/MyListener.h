@@ -52,4 +52,6 @@ public:
   void exitB_op(tinyrexxParser::B_opContext* ctx);
 
   void exitB_not(tinyrexxParser::B_notContext* ctx);
+
+  void exitTo_r(tinyrexxParser::To_rContext* ctx);
 };

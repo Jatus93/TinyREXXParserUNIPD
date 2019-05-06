@@ -11,7 +11,8 @@ i_op      : 'if' l_proxy 'then' 'do' statement+ 'end' | 'if' l_proxy 'then' 'do'
 w_loop    : 'do' 'while' l_proxy statement+ 'end' ;
 f_loop    : 'do' l_proxy statement+ 'end';
 l_else    : 'else';
-l_proxy   : bool_OP | assign 'to' a_expr;
+l_proxy   : bool_OP | ID '=' a_expr to_r a_expr;
+to_r      : 'to';
 a_expr    : ID | NUMBER | '(' a_expr ')' | a_expr a_op a_expr | MINUS a_expr ;
 a_op      : MINUS | PLUS | MUL | DIV ;
 r_op      : EQUAL | LT | LEQ | GT | GEQ ;
