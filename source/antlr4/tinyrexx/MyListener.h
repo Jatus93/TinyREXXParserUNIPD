@@ -29,8 +29,8 @@ public:
   void enterW_loop(tinyrexxParser::W_loopContext * ctx);
   void exitW_loop(tinyrexxParser::W_loopContext * ctx);
 
-  void enterTest(tinyrexxParser::TestContext * ctx);
-  void exitTest(tinyrexxParser::TestContext * ctx);
+  void enterL_proxy(tinyrexxParser::L_proxyContext * ctx);
+  void exitL_proxy(tinyrexxParser::L_proxyContext * ctx);
 
   void enterA_expr(tinyrexxParser::A_exprContext * ctx);
   void exitA_expr(tinyrexxParser::A_exprContext * ctx);
@@ -40,4 +40,7 @@ public:
 
   void enterTerminate(tinyrexxParser::TerminateContext * ctx);
   void exitTerminate(tinyrexxParser::TerminateContext * ctx);
+
+  void enterI_op(tinyrexxParser::I_opContext* ctx);
+  void exitI_op(tinyrexxParser::I_opContext* ctx);
 };

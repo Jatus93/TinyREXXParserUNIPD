@@ -125,11 +125,11 @@ void MyListener::exitW_loop(tinyrexxParser::W_loopContext * ctx){
 }
 
 
-void MyListener::enterTest(tinyrexxParser::TestContext * ctx){
+void MyListener::enterL_proxy(tinyrexxParser::L_proxyContext * ctx){
     cout << "(";
 }
 
-void MyListener::exitTest(tinyrexxParser::TestContext * ctx){
+void MyListener::exitL_proxy(tinyrexxParser::L_proxyContext * ctx){
     cout << ") {" << endl;
 }
 
@@ -139,4 +139,13 @@ void MyListener::enterTerminate(tinyrexxParser::TerminateContext* ctx){
 
 void MyListener::exitTerminate(tinyrexxParser::TerminateContext* ctx){
   cout <<";"<<'\n';
+}
+
+void MyListener::enterI_op(tinyrexxParser:: I_opContext* ctx){
+    cout << string(indent, ' ')<< "if ";
+    indent +=4;
+}
+void MyListener::exitI_op(tinyrexxParser:: I_opContext* ctx){
+    cout<<string(indent, ' ')<<"} ";
+    indent -=4;
 }
