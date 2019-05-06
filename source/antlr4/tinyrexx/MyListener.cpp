@@ -146,12 +146,29 @@ void MyListener::enterI_op(tinyrexxParser:: I_opContext* ctx){
     indent +=4;
 }
 void MyListener::exitI_op(tinyrexxParser:: I_opContext* ctx){
-    cout<<string(indent, ' ')<<"} ";
     indent -=4;
+    cout<<string(indent, ' ')<<"} "<<'\n';
 }
 void MyListener::enterBool_OP(tinyrexxParser::Bool_OPContext* ctx){
     cout<<"(";
 }
 void MyListener::exitBool_OP(tinyrexxParser::Bool_OPContext* ctx){
     cout<< ")";
+}
+
+void MyListener::exitL_else(tinyrexxParser::L_elseContext* ctx){
+  indent -=4;
+  cout<<string(indent, ' ')<<"} else { "<<'\n';
+  indent +=4;
+}
+
+void MyListener::exitB_op(tinyrexxParser::B_opContext* ctx){
+  if(ctx->AND()!=NULL)
+    cout << " && ";
+  else if(ctx->OR()!=NULL)
+    cout << " || ";
+}
+
+void MyListener::exitB_not(tinyrexxParser::B_notContext* ctx){
+  cout << "!";
 }

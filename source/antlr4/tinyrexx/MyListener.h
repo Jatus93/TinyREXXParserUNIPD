@@ -46,4 +46,10 @@ public:
 
   void enterBool_OP(tinyrexxParser::Bool_OPContext * ctx);
   void exitBool_OP(tinyrexxParser::Bool_OPContext * ctx);
+
+  void exitL_else(tinyrexxParser::L_elseContext * ctx);
+
+  void exitB_op(tinyrexxParser::B_opContext* ctx);
+
+  void exitB_not(tinyrexxParser::B_notContext* ctx);
 };
