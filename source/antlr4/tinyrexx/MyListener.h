@@ -29,6 +29,9 @@ public:
   void enterW_loop(tinyrexxParser::W_loopContext * ctx);
   void exitW_loop(tinyrexxParser::W_loopContext * ctx);
 
+  void enterF_loop(tinyrexxParser::F_loopContext * ctx);
+  void exitF_loop(tinyrexxParser::F_loopContext * ctx);
+
   void enterL_proxy(tinyrexxParser::L_proxyContext * ctx);
   void exitL_proxy(tinyrexxParser::L_proxyContext * ctx);
 
