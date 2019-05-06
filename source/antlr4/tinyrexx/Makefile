@@ -22,8 +22,8 @@ ANTLRS=tinyrexxBaseListener.h \
 syncheck: $(SCOBJS) $(OBJS) $(DEPS)
 	$(CXX) -o syncheck $(SCOBJS) $(OBJS) $(LDFLAGS)
 
-translate: $(TOBJS) $(OBJS) $(TDEPS) $(DEPS) 
-	$(CXX) -o translate $(TOBJS) $(OBJS) $(LDFLAGS)	
+translate: $(TOBJS) $(OBJS) $(TDEPS) $(DEPS)
+	$(CXX) -o translate $(TOBJS) $(OBJS) $(LDFLAGS)
 
 %.o: %.cpp $(DEPS)
 	$(CXX) -c -o $@ $< $(CXXFLAGS)
@@ -33,4 +33,3 @@ $(DEPS): tinyrexx.g4
 
 clean:
 	rm -f $(OBJS) $(TOBJS) $(SCOBJS) syncheck translate $(ANTLRS)
-
