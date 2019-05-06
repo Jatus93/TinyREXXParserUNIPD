@@ -143,7 +143,7 @@ void MyListener::enterL_proxy(tinyrexxParser::L_proxyContext * ctx){
 
 void MyListener::exitL_proxy(tinyrexxParser::L_proxyContext * ctx){
     if(ctx->ID()!= NULL)
-        cout << "; " << ctx->ID()->getText() << "++";
+        cout <<">="<<ctx->ID()->getText()<< "; " << ctx->ID()->getText() << "++";
     cout << "){" << endl;
 }
 
@@ -190,5 +190,5 @@ void MyListener::exitB_not(tinyrexxParser::B_notContext* ctx){
 }
 
 void MyListener::exitTo_r(tinyrexxParser::To_rContext* ctx){
-  cout<<";";
+  cout<<"; ";
 }
