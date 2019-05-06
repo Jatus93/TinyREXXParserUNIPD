@@ -130,6 +130,8 @@ void MyListener::enterL_proxy(tinyrexxParser::L_proxyContext * ctx){
 }
 
 void MyListener::exitL_proxy(tinyrexxParser::L_proxyContext * ctx){
+    if(ctx->a_expr()!= NULL)
+        cout << "; " << ctx->assign()->ID()->getText() << "++";
     cout << "){" << endl;
 }
 
