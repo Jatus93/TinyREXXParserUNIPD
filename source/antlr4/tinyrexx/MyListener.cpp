@@ -124,6 +124,16 @@ void MyListener::exitW_loop(tinyrexxParser::W_loopContext * ctx){
     cout << string(indent, ' ') << "}" << endl;
 }
 
+void MyListener::enterF_loop(tinyrexxParser::F_loopContext * ctx){
+    cout << string(indent, ' ')<< "for";
+    indent += 4;
+}
+
+void MyListener::exitF_loop(tinyrexxParser::F_loopContext * ctx){
+    indent -= 4;
+    cout << string(indent, ' ')<< "}" <<endl;
+}
+
 
 void MyListener::enterL_proxy(tinyrexxParser::L_proxyContext * ctx){
     cout << "(";
