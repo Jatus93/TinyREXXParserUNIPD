@@ -2,7 +2,7 @@
 Progetto per il corso di automi e linguaggi formali dell'università di Padova
 
 ## Obbiettivo del progetto
-Questo progetto di prefigge come obbiettivo di avere alla fine dello sviluppo un traduttore dal linguaggio TinyRexx a C++ 
+Questo progetto di prefigge come obbiettivo di avere alla fine dello sviluppo un traduttore dal linguaggio TinyRexx a C++
 
 relatori :
  - Emanuele Ostanello
@@ -13,3 +13,9 @@ relatori :
 - [x] Costrutto if else end
 - [x] Costrutto do ID = expr1 to expr1 operation+ end
 - [x] Costrutto per espressioni booleane
+
+### Grammatica e implementazione
+
+Grammatica [tinyrexx.g4](completed/tinyrexx.g4)
+implementazione [MyListener.h](completed/MyListener.h)
+[MyListener.cpp](completed/MyListener.cpp)
