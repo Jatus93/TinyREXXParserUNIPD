@@ -9,7 +9,7 @@ relatori :
  - Gianmarco Pettinato
 
 ### Funzionalità richieste
-[x] Costrutto if end
-[x] Costrutto if else end
-[x] Costrutto do ID = expr1 to expr1 operation+ end
-[x] Costrutto per espressioni booleane
+- [x] Costrutto if end
+- [x] Costrutto if else end
+- [x] Costrutto do ID = expr1 to expr1 operation+ end
+- [x] Costrutto per espressioni booleane
