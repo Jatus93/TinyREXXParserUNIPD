@@ -165,7 +165,7 @@ void MyListener::exitI_op(tinyrexxParser:: I_opContext* ctx){
 }
 void MyListener::enterBool_OP(tinyrexxParser::Bool_OPContext* ctx){
     if(ctx->OPENP()!=NULL)
-      cout<<")";
+      cout<<"(";
 }
 void MyListener::exitBool_OP(tinyrexxParser::Bool_OPContext* ctx){
     if(ctx->CLOSEP()!=NULL)
