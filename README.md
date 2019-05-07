@@ -2,7 +2,7 @@
 Progetto per il corso di automi e linguaggi formali dell'università di Padova
 
 ## Obbiettivo del progetto
-Questo progetto di prefigge come obbiettivo di avere alla fine dello sviluppo un traduttore dal linguaggio TinyRexx a C++
+Questo progetto si prefigge come obbiettivo di avere alla fine dello sviluppo un traduttore dal linguaggio TinyRexx a C++
 
 relatori :
  - Emanuele Ostanello
