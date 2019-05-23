@@ -33,7 +33,7 @@ public:
   void exitF_loop(tinyrexxParser::F_loopContext * ctx);
 
   void enterIf_proxy(tinyrexxParser::If_proxyContext * ctx);
-  void exitIf_proxy(tinyrexxParser::IF_proxyContext * ctx);
+  void exitIf_proxy(tinyrexxParser::If_proxyContext * ctx);
 
   void enterFor_proxy(tinyrexxParser::For_proxyContext * ctx);
   void exitFor_proxy(tinyrexxParser::For_proxyContext * ctx);
