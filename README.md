@@ -6,6 +6,7 @@ Questo progetto si prefigge come obbiettivo di avere alla fine dello sviluppo un
 
 relatori :
  - Emanuele Ostanello
+ - Nicola Pastore
  - Gianmarco Pettinato
 
 ### Funzionalità richieste
