@@ -20,3 +20,15 @@ relatori :
 Grammatica [tinyrexx.g4](completed/tinyrexx.g4)
 implementazione [MyListener.h](completed/MyListener.h)
 [MyListener.cpp](completed/MyListener.cpp)
+
+### Istruzioni per compilare
+- Entrare dentro la directory dev/antlr4
+~~~~
+source setup.sh
+cd tinyrexx
+make translate
+~~~~
+
+Non compila con versioni del g++ > 6
+In caso la versione del compilatore dovesse essere inferiore alla 6 e dovesse
+dare problemi modificare la prima riga del Makefile `CXX=g++-5` a `CXX=g++`
