@@ -1,17 +1,18 @@
 grammar tinyrexx;
 
-program   : statement+;
+program   : statement+ EOF;
 
 statement : assign | print | input | w_loop | i_op | f_loop | terminate;
 
 assign    : ID '=' a_expr;
 print     : 'say' a_expr ;
 input     : 'pull' ID ;
-i_op      : 'if' l_proxy 'then' 'do' statement+ 'end' | 'if' l_proxy 'then' 'do' statement+ 'end' l_else 'do' statement+ 'end';
-w_loop    : 'do' 'while' l_proxy statement+ 'end' ;
-f_loop    : 'do' l_proxy statement+ 'end';
+i_op      : 'if' if_proxy 'then' 'do' statement+ 'end' | 'if' if_proxy 'then' 'do' statement+ 'end' l_else 'do' statement+ 'end';
+w_loop    : 'do' 'while' if_proxy statement+ 'end' ;
+f_loop    : 'do' for_proxy statement+ 'end';
 l_else    : 'else';
-l_proxy   : bool_OP | ID '=' a_expr to_r a_expr;
+if_proxy  : bool_OP ;
+for_proxy : ID '=' a_expr to_r a_expr;
 to_r      : 'to';
 a_expr    : ID | NUMBER | '(' a_expr ')' | a_expr a_op a_expr | MINUS a_expr ;
 a_op      : MINUS | PLUS | MUL | DIV ;

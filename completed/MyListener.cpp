@@ -135,18 +135,25 @@ void MyListener::exitF_loop(tinyrexxParser::F_loopContext * ctx){
 }
 
 
-void MyListener::enterL_proxy(tinyrexxParser::L_proxyContext * ctx){
+void MyListener::enterIf_proxy(tinyrexxParser::If_proxyContext * ctx){
     cout << "(";
-    if(ctx->ID()!=NULL)
-      cout << ctx->ID()->getText() << "=" ;
 }
 
-void MyListener::exitL_proxy(tinyrexxParser::L_proxyContext * ctx){
-    if(ctx->ID()!= NULL)
-        cout <<">="<<ctx->ID()->getText()<< "; " << ctx->ID()->getText() << "++";
+void MyListener::exitIf_proxy(tinyrexxParser::If_proxyContext * ctx){
     cout << "){" << endl;
 }
 
+void MyListener::enterFor_proxy(tinyrexxParser::For_proxyContext * ctx){
+  cout << "(";
+  if(ctx->ID()!=NULL)
+    cout << ctx->ID()->getText() << "=" ;
+}
+
+void MyListener::exitFor_proxy(tinyrexxParser::For_proxyContext * ctx){
+  if(ctx->ID()!= NULL)
+      cout <<">="<<ctx->ID()->getText()<< "; " << ctx->ID()->getText() << "++";
+  cout << "){" << endl;
+}
 void MyListener::enterTerminate(tinyrexxParser::TerminateContext* ctx){
   cout << string(indent, ' ')<<"return ";
 }
